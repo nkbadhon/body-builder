@@ -1,9 +1,22 @@
-import React from 'react';
-import ExcersizeDetails from '../ExcersizeDetails/ExcersizeDetails';
-import './Profile.css'
+import React, { useState } from 'react';
+import './Profile.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Profile = () => {
 
+const Profile = (props) => {
+    const { acc } = props;
+    const notify = () => toast("Congratulations!", { position: "top-center" });
+    const [off, setOff] = useState([]);
+    const click = (a) => {
+        const newA = [a.target.innerText];
+        setOff(newA);
+    }
+    let total = 0;
+    for (const role of acc) {
+        total = total + role.timereq;
+        console.log(total)
+    }
     return (
         <div className='FullProfileBody'>
             <div className='JustPictureAndInfo'>
@@ -33,13 +46,28 @@ const Profile = () => {
             <div className="break">
                 <h4>Add a Break</h4>
                 <div className="breakTime">
-                    <p className='time'>10s</p>
-                    <p className='time'>20s</p>
-                    <p className='time'>30s</p>
-                    <p className='time'>40s</p>
+                    <button onClick={(a) => click(a)} className="breakTime"><span>10</span>s</button>
+                    <button onClick={(a) => click(a)} className="breakTime"><span>20</span>s</button>
+                    <button onClick={(a) => click(a)} className="breakTime"><span>30</span>s</button>
+                    <button onClick={(a) => click(a)} className="breakTime"><span>40</span>s</button>
+                    <button onClick={(a) => click(a)} className="breakTime"><span>50</span>s</button>
+
                 </div>
             </div>
-            <ExcersizeDetails></ExcersizeDetails>
+            <div style={{ paddingBottom: 40 }}>
+                <h4>Exercise Details</h4>
+                <div className='extime'>
+                    <h5>Exercise Time</h5>
+                    <p>{total} seconds</p>
+                </div>
+                <div className='extime'>
+                    <h5>Break Time</h5>
+                    <p>{off} Seconds</p>
+                </div>
+                <button className='TaskDoneButton' onClick={notify}>Task Done</button>
+                <ToastContainer />
+            </div>
+
         </div>
     );
 };

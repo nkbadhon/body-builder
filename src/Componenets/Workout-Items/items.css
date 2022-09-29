@@ -1,18 +1,39 @@
-.header {
-    color: rgb(82, 82, 171);
-    margin-left: 2rem;
+.Prof-body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
-.selection {
-    margin-left: 2rem;
+@media screen and (max-width:778px) {
+    .Prof-body {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.show {
+@media screen and (max-width:480px) {
+    .Prof-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.cart-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 2rem;
+    gap: 15px;
+    margin-top: 50px;
 }
 
 .qna {
     margin-left: 2rem;
+}
+
+@media screen and (max-width:778px) {
+    .cart-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .cart-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

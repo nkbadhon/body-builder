@@ -4,17 +4,17 @@ import './Single.css'
 
 
 const Single = (props) => {
-    const { btnAddToList, time } = props;
+    const { btnAddToList, product } = props;
     const { name, timereq, img, age } = props.product;
     return (
         <div className='product'>
             <img src={img} alt="" />
             <div className='info'>
                 <h2>{name}</h2>
-                <p>Time: {timereq}s</p>
+                <p>Time: {timereq} s</p>
                 <p>Expected Age: {age}</p>
             </div>
-            <button className='Button' onClick={() => btnAddToList(props.product)}>Add to List</button>
+            <button className='Button' onClick={() => btnAddToList(product)}>Add to List</button>
 
         </div>
     );

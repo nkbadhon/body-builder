@@ -45,3 +45,20 @@
     border-radius: 20px;
     padding: 10px;
 }
+
+.extime {
+    background-color: rgb(228, 233, 144);
+    border-radius: 20px;
+    padding: .5% 10%;
+    margin-bottom: 5%;
+}
+
+.TaskDoneButton {
+    background-color: rgb(144, 151, 19);
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    height: 20%;
+    color: white;
+}

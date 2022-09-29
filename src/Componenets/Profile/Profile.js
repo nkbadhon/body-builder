@@ -3,6 +3,7 @@ import ExcersizeDetails from '../ExcersizeDetails/ExcersizeDetails';
 import './Profile.css'
 
 const Profile = () => {
+
     return (
         <div className='FullProfileBody'>
             <div className='JustPictureAndInfo'>

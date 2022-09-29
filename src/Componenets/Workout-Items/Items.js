@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Single from '../SingleItems/Single';
 import './items.css';
+
+
 const Items = () => {
+    const [time, setTime] = useState([]);
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('database.json')
@@ -9,7 +12,9 @@ const Items = () => {
             .then(data => setProducts(data));
     }, [])
     const btnAddToList = (product) => {
-        console.log(product)
+        console.log(product);
+        const newTime = [...time, product];
+        setTime(newTime);
     }
     return (
         <div className="gym-items">
@@ -21,6 +26,7 @@ const Items = () => {
                         key={product.id}
                         product={product}
                         btnAddToList={btnAddToList}
+                        time={time}
                     ></Single>)
 
                 }

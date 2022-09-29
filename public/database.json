@@ -2,42 +2,42 @@
     {
         "id": 1,
         "name": "Cardio Workouts",
-        "time": "25",
+        "timereqreq": "25",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-wide-image/workout/calisthenics_for_lifters_-_1000x500.jpg",
         "age": "20+"
     },
     {
         "id": 2,
         "name": "Shoulder Workouts",
-        "time": "20",
+        "timereqreq": "20",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-wide-image/workout/the-best-shoulder-workout-wide.jpg",
         "age": "20+"
     },
     {
         "id": 3,
         "name": "Leg Workouts",
-        "time": "20",
+        "timereq": "20",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/rp-21_glute_workout_-_1200x630.jpg",
         "age": "20+"
     },
     {
         "id": 4,
         "name": "Tricep Workouts",
-        "time": "25",
+        "timereq": "25",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-wide-image/workout/30-day-arm-workout-wide.jpg",
         "age": "20+"
     },
     {
         "id": 5,
         "name": "Glute Workouts",
-        "time": "20",
+        "timereq": "20",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/fit-female-doing-glute-workouts-outside.jpg",
         "age": "20+"
     },
     {
         "id": 6,
         "name": "Bicep Workouts",
-        "time": "25",
+        "timereq": "25",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-wide-image/workout/4-week-bicep-peaking-workout-wide.jpg",
         "age": "20+"
     }

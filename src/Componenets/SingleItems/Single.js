@@ -7,7 +7,6 @@ const Single = (props) => {
         <div className='product'>
             <img src={img} alt="" />
             <div className='info'>
-                <p>Id: {id}</p>
                 <h2>{name}</h2>
                 <p>Time: {time}s</p>
                 <p>Expected Age: {age}</p>

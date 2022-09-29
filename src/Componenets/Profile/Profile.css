@@ -2,6 +2,8 @@
     background-color: rgb(241, 243, 197);
     position: sticky;
     padding-left: 20px;
+    padding-right: 20px;
+
 }
 
 .image {
@@ -24,4 +26,21 @@
 
 .otherInfo {
     display: flex;
+    background-color: rgb(228, 233, 144);
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.breakTime {
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(228, 233, 144);
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.time {
+    background-color: rgb(241, 243, 197);
+    border-radius: 20px;
+    padding: 10px;
 }

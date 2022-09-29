@@ -1,6 +1,7 @@
 .FullProfileBody {
     background-color: rgb(241, 243, 197);
     position: sticky;
+    top: 0;
     padding-left: 20px;
     padding-right: 20px;
 

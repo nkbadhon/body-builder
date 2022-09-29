@@ -11,7 +11,7 @@ const Single = (props) => {
                 <p>Time: {time}s</p>
                 <p>Expected Age: {age}</p>
             </div>
-            <button className='Button'>Add to List</button>
+            <button className='Button' onClick={() => props.btnAddToList(props.product)}>Add to List</button>
 
         </div>
     );

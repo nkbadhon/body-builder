@@ -2,12 +2,18 @@ import React from 'react';
 import './Single.css'
 
 const Single = (props) => {
-    const { id, name, time, img } = props.product;
+    const { id, name, time, img, age } = props.product;
     return (
         <div className='product'>
             <img src={img} alt="" />
-            <h2>Name: {name}</h2>
-            <h4>Id: {id}</h4>
+            <div className='info'>
+                <p>Id: {id}</p>
+                <h2>{name}</h2>
+                <p>Time: {time}s</p>
+                <p>Expected Age: {age}</p>
+            </div>
+            <button className='Button'>Add to List</button>
+
         </div>
     );
 };

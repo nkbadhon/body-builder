@@ -15,8 +15,8 @@ const Items = () => {
     const btnAddToList = (product) => {
         const newAcc = [...acc, product];
         setAcc(newAcc);
+
     }
-    // console.log(newTime)
     return (
         <div className='gym-items'>
             <div className="Prof-body">

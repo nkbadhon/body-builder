@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,13 +9,33 @@ const Profile = (props) => {
     const notify = () => toast("Congratulations!", { position: "top-center" });
     const [off, setOff] = useState([]);
     const click = (a) => {
+        // Store and show data from local storage
+
+        let breaktimestorage = {};
+
+        const quantity = breaktimestorage[a.target.innerText];
+        if (quantity) {
+
+            const newQuantity = parseInt(quantity) + 1;
+            breaktimestorage[a.target.innerText] = newQuantity;
+        }
+        else {
+            breaktimestorage[a.target.innerText] = 1;
+
+        }
+
+        for (const sec in breaktimestorage) {
+            console.log(sec)
+        }
+
+        localStorage.setItem("Break-time", JSON.stringify(breaktimestorage))
         const newA = [a.target.innerText];
         setOff(newA);
     }
     let total = 0;
     for (const role of acc) {
         total = total + role.timereq;
-        console.log(total)
+        // console.log(total);
     }
     return (
         <div className='FullProfileBody'>
@@ -45,6 +65,7 @@ const Profile = (props) => {
             </div>
             <div className="break">
                 <h4>Add a Break</h4>
+                {/* all break times here */}
                 <div className="breakTime">
                     <button onClick={(a) => click(a)} className="time"><span>10</span>s</button>
                     <button onClick={(a) => click(a)} className="time"><span>20</span>s</button>

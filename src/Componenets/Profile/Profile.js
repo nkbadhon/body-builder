@@ -46,11 +46,11 @@ const Profile = (props) => {
             <div className="break">
                 <h4>Add a Break</h4>
                 <div className="breakTime">
-                    <button onClick={(a) => click(a)} className="breakTime"><span>10</span>s</button>
-                    <button onClick={(a) => click(a)} className="breakTime"><span>20</span>s</button>
-                    <button onClick={(a) => click(a)} className="breakTime"><span>30</span>s</button>
-                    <button onClick={(a) => click(a)} className="breakTime"><span>40</span>s</button>
-                    <button onClick={(a) => click(a)} className="breakTime"><span>50</span>s</button>
+                    <button onClick={(a) => click(a)} className="time"><span>10</span>s</button>
+                    <button onClick={(a) => click(a)} className="time"><span>20</span>s</button>
+                    <button onClick={(a) => click(a)} className="time"><span>30</span>s</button>
+                    <button onClick={(a) => click(a)} className="time"><span>40</span>s</button>
+                    <button onClick={(a) => click(a)} className="time"><span>50</span>s</button>
 
                 </div>
             </div>
